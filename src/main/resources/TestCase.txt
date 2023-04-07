@@ -1,0 +1,20 @@
+ID:	A1
+Author:	Хамбиков Дмитрий
+Summary:	Проверка веса
+Preconditions:	Используемые данные покемонов присутствуют в БД
+Steps:	1) Отправить запрос "https://pokeapi.co/api/v2/pokemon/rattata" 2) Записать данные атрибута "weight" покемона "rattata" 3) Отправить запрос "https://pokeapi.co/api/v2/pokemon/pidgeotto" 4) Записать данные атрибута "weight" покемона "pidgeotto" 5) Сравнить значения атрибута "weight" двух покемонов
+Expected Result: Вес покемона "rattata" меньше "pidgeotto"
+
+ID:	A2
+Author:	Хамбиков Дмитрий
+Summary:	Наличие умения (ability) побег (run-away)
+Preconditions:	Используемые данные покемонов присутствуют в БД
+Steps:	1) Отправить запрос "https://pokeapi.co/api/v2/pokemon/rattata" 2) Записать данные атрибута "abilities.ability.name" покемона "rattata" 4)Пройтись по списку умений для поиска run-away
+Expected Result: В списке умений присутствует побег (run-away)
+
+ID:	A3
+Author:	Хамбиков Дмитрий
+Summary:	Проверка ограничения списка (limit) покемонов и наличие имени в нем
+Preconditions:	Используемые данные покемонов присутствуют в БД
+Steps:	1) Отправить запрос "https://pokeapi.co/api/v2/pokemon?limit=10 с ограничением списка в 10 покемонов 2) Проверить, что атрибут "results.name" не пустой 3) Записать данные атрибута "results" 4) Сравнить размер атрибута "results" с заданным значением limit=10
+Expected Result: Список покемонов равен 10 и у всех покемонов присутствует имя
